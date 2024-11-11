@@ -10,11 +10,14 @@ import UIKit
 class ViewController: UIViewController {
     
 
-    @IBOutlet weak var imagenCambiante: UIImageView!-
+    
+    @IBOutlet weak var imagenCambiante: UIImageView!
+    @IBOutlet weak var botonEmpezarJuego: UIButton!
     var imagenes = [UIImage(named:"RainbowDash"),UIImage(named:"Applejack"),UIImage(named:"Fluttershy"),UIImage(named:"PinkiePie"),UIImage(named:"Rarity"),UIImage(named:"TwilightSparkle")]
         
     override func viewDidLoad() {
-        
+        self.imagenCambiante.alpha = 1
+        self.botonEmpezarJuego.isHidden = true
         var imagenesCopia = Array(imagenes)
         var imagenesPartida = [UIImage]()
         for _ in imagenes{
@@ -30,8 +33,10 @@ class ViewController: UIViewController {
             print(indexImagenes)
             if indexImagenes == imagenesPartida.count{
                 timer.invalidate()
+                self.botonEmpezarJuego.isHidden = false
             }
         }
+        
     }
     
     
