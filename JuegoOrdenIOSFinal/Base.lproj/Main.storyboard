@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="-799.23664122137404" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Pantalla Botones-->
         <scene sceneID="8cw-KK-J75">
             <objects>
-                <viewController id="lGD-Ot-rPU" sceneMemberID="viewController">
+                <viewController id="lGD-Ot-rPU" customClass="pantallaBotones" customModule="JuegoOrdenIOSFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O0v-Bu-EjW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +60,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rainbow_circles_the_castle_exterior_S4E26" translatesAutoresizingMaskIntoConstraints="NO" id="sdd-fa-Rdv">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0Sa-Bv-s8j">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0Sa-Bv-s8j">
                                 <rect key="frame" x="20" y="20" width="163" height="669"/>
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMa-qD-GTt">
@@ -69,14 +69,20 @@
                                         <buttonConfiguration key="configuration" style="plain" image="RainbowDash copia">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="Botones:" destination="lGD-Ot-rPU" eventType="touchUpInside" id="lcW-ZJ-yHx"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mRg-bn-0p2">
+                                    <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mRg-bn-0p2">
                                         <rect key="frame" x="0.0" y="225.66666666666669" width="163" height="217.66666666666669"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Applejack copia"/>
+                                        <connections>
+                                            <action selector="Botones:" destination="lGD-Ot-rPU" eventType="touchUpInside" id="8Nc-wB-Ps3"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dqz-PP-nXA">
+                                    <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dqz-PP-nXA">
                                         <rect key="frame" x="0.0" y="451.33333333333331" width="163" height="217.66666666666669"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
@@ -84,23 +90,23 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VSa-sn-rMD">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VSa-sn-rMD">
                                 <rect key="frame" x="214" y="20" width="163" height="669"/>
                                 <subviews>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UF-92-5Ut">
+                                    <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UF-92-5Ut">
                                         <rect key="frame" x="0.0" y="0.0" width="163" height="217.66666666666666"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Fluttershy copia">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qte-VQ-Wdt">
+                                    <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qte-VQ-Wdt">
                                         <rect key="frame" x="0.0" y="225.66666666666669" width="163" height="217.66666666666669"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="PinkiePie copia"/>
                                     </button>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="h6l-bX-EhX">
+                                    <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="h6l-bX-EhX">
                                         <rect key="frame" x="0.0" y="451.33333333333331" width="163" height="217.66666666666669"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
@@ -108,6 +114,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fA-pS-TIX">
+                                <rect key="frame" x="33" y="732" width="327" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iih-zn-pVS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -119,15 +131,27 @@
                             <constraint firstItem="sdd-fa-Rdv" firstAttribute="top" secondItem="O0v-Bu-EjW" secondAttribute="top" id="EW5-ia-pRT"/>
                             <constraint firstItem="0Sa-Bv-s8j" firstAttribute="leading" secondItem="iih-zn-pVS" secondAttribute="leading" constant="20" id="RLl-bJ-dDd"/>
                             <constraint firstItem="sdd-fa-Rdv" firstAttribute="leading" secondItem="iih-zn-pVS" secondAttribute="leading" id="TJN-mX-R5k"/>
+                            <constraint firstItem="iih-zn-pVS" firstAttribute="bottom" secondItem="2fA-pS-TIX" secondAttribute="bottom" constant="84" id="U57-gE-q8j"/>
                             <constraint firstItem="sdd-fa-Rdv" firstAttribute="trailing" secondItem="iih-zn-pVS" secondAttribute="trailing" id="Uni-wp-KT8"/>
                             <constraint firstAttribute="bottom" secondItem="sdd-fa-Rdv" secondAttribute="bottom" id="bCj-vp-vSO"/>
+                            <constraint firstItem="iih-zn-pVS" firstAttribute="trailing" secondItem="2fA-pS-TIX" secondAttribute="trailing" constant="33" id="hHe-rW-WXP"/>
+                            <constraint firstItem="2fA-pS-TIX" firstAttribute="leading" secondItem="iih-zn-pVS" secondAttribute="leading" constant="33" id="hkg-mz-Kdl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ykU-WN-hZ4"/>
+                    <connections>
+                        <outlet property="AppleJackButton" destination="mRg-bn-0p2" id="uTu-20-7hc"/>
+                        <outlet property="FluttershyButton" destination="7UF-92-5Ut" id="Vyb-vm-oBD"/>
+                        <outlet property="PinkieButton" destination="qte-VQ-Wdt" id="7s1-KS-0ao"/>
+                        <outlet property="RarityButton" destination="h6l-bX-EhX" id="ViY-mT-xpr"/>
+                        <outlet property="TwilightButton" destination="dqz-PP-nXA" id="PhD-BZ-EoC"/>
+                        <outlet property="puntuacionText" destination="2fA-pS-TIX" id="rXe-Cw-1Ni"/>
+                        <outlet property="rainbowButton" destination="NMa-qD-GTt" id="FDr-ty-bYy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vr2-jE-b8j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="855.72519083969462" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="809.92366412213732" y="-27.464788732394368"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PoX-sO-dnL">
@@ -173,7 +197,6 @@
                             <constraint firstItem="bC0-ln-pBm" firstAttribute="bottom" secondItem="Ogh-JU-19U" secondAttribute="bottom" constant="242" id="hWS-Co-R4x"/>
                             <constraint firstItem="Ogh-JU-19U" firstAttribute="leading" secondItem="bC0-ln-pBm" secondAttribute="leading" constant="46" id="pQl-fB-gbE"/>
                             <constraint firstItem="bC0-ln-pBm" firstAttribute="trailing" secondItem="Ogh-JU-19U" secondAttribute="trailing" constant="47" id="vpu-LC-EIg"/>
-                            <constraint firstItem="oWW-S7-OIa" firstAttribute="top" secondItem="Ogh-JU-19U" secondAttribute="bottom" constant="31" id="xj1-eb-MXE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pdW-s4-eQj"/>
@@ -196,7 +219,7 @@
         <image name="Rarity copia" width="180" height="210"/>
         <image name="TwilightSparkle" width="180" height="210"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

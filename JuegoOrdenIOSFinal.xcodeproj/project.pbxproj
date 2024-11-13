@@ -17,7 +17,7 @@
 		7F17B4412CDA359A00E06810 /* JuegoOrdenIOSFinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17B4402CDA359A00E06810 /* JuegoOrdenIOSFinalUITests.swift */; };
 		7F17B4432CDA359A00E06810 /* JuegoOrdenIOSFinalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17B4422CDA359A00E06810 /* JuegoOrdenIOSFinalUITestsLaunchTests.swift */; };
 		7FC278572CE22EC10089070C /* segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC278562CE22EC10089070C /* segue.swift */; };
-		7FC278592CE236D70089070C /* pantallaBotones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC278582CE236D70089070C /* pantallaBotones.swift */; };
+		7FE6E0552CE3653000717EA5 /* pantallaBotones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE6E0542CE3653000717EA5 /* pantallaBotones.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		7F17B4402CDA359A00E06810 /* JuegoOrdenIOSFinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoOrdenIOSFinalUITests.swift; sourceTree = "<group>"; };
 		7F17B4422CDA359A00E06810 /* JuegoOrdenIOSFinalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoOrdenIOSFinalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7FC278562CE22EC10089070C /* segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segue.swift; sourceTree = "<group>"; };
-		7FC278582CE236D70089070C /* pantallaBotones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantallaBotones.swift; sourceTree = "<group>"; };
+		7FE6E0542CE3653000717EA5 /* pantallaBotones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantallaBotones.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +106,12 @@
 				7F17B41F2CDA359700E06810 /* AppDelegate.swift */,
 				7F17B4212CDA359700E06810 /* SceneDelegate.swift */,
 				7F17B4232CDA359700E06810 /* ViewController.swift */,
-				7FC278582CE236D70089070C /* pantallaBotones.swift */,
 				7F17B4252CDA359700E06810 /* Main.storyboard */,
 				7F17B4282CDA359900E06810 /* Assets.xcassets */,
 				7F17B42A2CDA359900E06810 /* LaunchScreen.storyboard */,
 				7F17B42D2CDA359900E06810 /* Info.plist */,
 				7FC278562CE22EC10089070C /* segue.swift */,
+				7FE6E0542CE3653000717EA5 /* pantallaBotones.swift */,
 			);
 			path = JuegoOrdenIOSFinal;
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FC278592CE236D70089070C /* pantallaBotones.swift in Sources */,
+				7FE6E0552CE3653000717EA5 /* pantallaBotones.swift in Sources */,
 				7F17B4242CDA359700E06810 /* ViewController.swift in Sources */,
 				7F17B4202CDA359700E06810 /* AppDelegate.swift in Sources */,
 				7F17B4222CDA359700E06810 /* SceneDelegate.swift in Sources */,
