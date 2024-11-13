@@ -16,22 +16,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var imagenCambiante: UIImageView!
     @IBOutlet weak var botonEmpezarJuego: UIButton!
     
-    var imagenesPartida2 = [UIImage]()
         
     override func viewDidLoad() {
         
         self.imagenCambiante.alpha = 1
         self.botonEmpezarJuego.isHidden = true
         var imagenesCopia = Array(imagenes)
+        var indiceCopia = Array(indice)
         
         for _ in imagenes{
             let numRandom = Int.random(in: 0..<(imagenesCopia.count))
             imagenesPartida.append(imagenesCopia[numRandom]!)
-            print(imagenesPartida)
-            indicePartida.append(indice[numRandom])
+            indicePartida.append(indiceCopia[numRandom])
+            print("indice")
+            print(indicePartida)
+            print("--------\n")
             imagenesCopia.remove(at: numRandom)
+            indiceCopia.remove(at: numRandom)
         }
-        imagenesPartida2 = Array(imagenesPartida)
         var indexImagenes = 0
         
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in

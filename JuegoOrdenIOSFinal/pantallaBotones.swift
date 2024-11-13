@@ -8,7 +8,7 @@
 import UIKit
 
 class pantallaBotones: UIViewController{
-    var puntuacion = 0
+    
     var indiceUsuario = [Int]()
     
     @IBOutlet weak var rainbowButton: UIButton!
@@ -23,21 +23,26 @@ class pantallaBotones: UIViewController{
     @IBAction func Botones(_ sender: UIButton) {
         
         indiceUsuario.append(sender.tag)
-        print("tag: " + String(sender.tag))
+        //print("tag: " + String(sender.tag))
+        sender.isHidden = true
+        comprobarPunt()
         
     }
     override func viewDidLoad(){
-        for x in indicePartida{
-            print("x: " + String(x))
-            for y in indiceUsuario{
-                print("y: " + String(y))
-                if x == y{
-                    puntuacion += 1
-                    print("punt: " + String(puntuacion))
-                }
+        
+    }
+    
+    func comprobarPunt(){
+        
+        var puntuacion = 0
+        for i in 0...(indiceUsuario.count - 1){
+            print(i)
+            if indicePartida[i] == indiceUsuario[i]{
+                
+                puntuacion = puntuacion + 1
+                print("punt: " + String(puntuacion))
             }
         }
-        
         puntuacionText.text = "Puntuacion total " + String(puntuacion)
     }
     
