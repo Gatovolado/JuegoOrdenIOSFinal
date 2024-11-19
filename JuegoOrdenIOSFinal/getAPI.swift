@@ -11,22 +11,18 @@ class getAPI: UIViewController{
     
     @IBOutlet weak var tablaPuntuaciones: UITableView!
     override func viewDidLoad() {
-        let url = URL(string:"http://private-088c5a-        usuarios4.apiary-mock.com/users")
-
-        URLSession.shared.dataTask(with: url!) {
+        let url = URL(string: "https://private-088c5a-usuarios4.apiary-mock.com/users")!
+        URLSession.shared.dataTask(with: url) {
         (data, response, error) in
         if error == nil {
-            print("data: ")
-            print(data!)
-            
+            do {
+                let users = try JSONDecoder().decode([Usuario].self, from: data!)
+            } catch let errorJson {
+                print(errorJson)
+            }
         } else {
             print(error ?? "a")
         }
         }.resume()
     }
-    
-}
-class User : Decodable {
-var user: String
-var pass: String
 }
