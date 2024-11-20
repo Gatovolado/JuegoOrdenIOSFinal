@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Usuario : Decodable {
-    var user: String
-    var pass: String
+class Usuario : Codable {
+    var name: String
+    var score: Int
 }
