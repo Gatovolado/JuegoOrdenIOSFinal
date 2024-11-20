@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="6xc-o0-ZTi">
             <objects>
-                <viewController id="CAj-lY-hKd" sceneMemberID="viewController">
+                <viewController id="CAj-lY-hKd" customClass="mainViewController" customModule="JuegoOrdenIOSFinal" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EGU-Uq-lOQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,16 +27,25 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Prueba tu memoria de la manera mas epica posible, nada más y nada menos que con fotos de my little pony (EL BOTÓN)"/>
                                 <connections>
+                                    <action selector="botonMain:" destination="CAj-lY-hKd" eventType="touchUpInside" id="6A8-Dj-eaj"/>
                                     <segue destination="bxs-AD-TTm" kind="presentation" identifier="irPantallaJuego" customClass="segue" customModule="JuegoOrdenIOSFinal" customModuleProvider="target" modalPresentationStyle="fullScreen" id="CWi-0k-Zfh"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvF-Mu-nCm">
+                                <rect key="frame" x="135" y="138" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gri-ez-5Ru"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bq2-nn-THm" firstAttribute="top" secondItem="EGU-Uq-lOQ" secondAttribute="top" id="4Nv-cS-Nld"/>
+                            <constraint firstItem="pvF-Mu-nCm" firstAttribute="top" secondItem="gri-ez-5Ru" secondAttribute="top" constant="79" id="GYx-hE-9y0"/>
                             <constraint firstItem="gri-ez-5Ru" firstAttribute="trailing" secondItem="u34-9f-fng" secondAttribute="trailing" constant="126" id="Olj-jk-bQr"/>
+                            <constraint firstItem="gri-ez-5Ru" firstAttribute="trailing" secondItem="pvF-Mu-nCm" secondAttribute="trailing" constant="161" id="Pgu-po-xgU"/>
                             <constraint firstItem="gri-ez-5Ru" firstAttribute="bottom" secondItem="u34-9f-fng" secondAttribute="bottom" constant="307" id="TsJ-qa-ktk"/>
+                            <constraint firstItem="pvF-Mu-nCm" firstAttribute="leading" secondItem="gri-ez-5Ru" secondAttribute="leading" constant="135" id="aSc-eo-U3D"/>
                             <constraint firstItem="gri-ez-5Ru" firstAttribute="trailing" secondItem="bq2-nn-THm" secondAttribute="trailing" id="blg-bC-N3t"/>
                             <constraint firstItem="u34-9f-fng" firstAttribute="leading" secondItem="gri-ez-5Ru" secondAttribute="leading" constant="99" id="eib-W5-Xci"/>
                             <constraint firstAttribute="bottom" secondItem="bq2-nn-THm" secondAttribute="bottom" id="n6R-ct-CEJ"/>
@@ -44,6 +53,10 @@
                             <constraint firstItem="bq2-nn-THm" firstAttribute="leading" secondItem="gri-ez-5Ru" secondAttribute="leading" id="vok-2T-xQS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inicioButton" destination="u34-9f-fng" id="vyN-Zd-k9x"/>
+                        <outlet property="nombreInput" destination="pvF-Mu-nCm" id="bOZ-hD-kEc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDc-uh-vMS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,6 +150,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Puntuaciones globales"/>
                                 <connections>
+                                    <action selector="puntuacionesButton:" destination="lGD-Ot-rPU" eventType="touchUpInside" id="JOR-BW-Xie"/>
                                     <segue destination="pQ0-rj-urg" kind="presentation" identifier="Puntuaciones" customClass="segue" customModule="JuegoOrdenIOSFinal" customModuleProvider="target" modalPresentationStyle="fullScreen" id="bSr-iF-mHF"/>
                                 </connections>
                             </button>
@@ -170,6 +184,7 @@
                         <outlet property="TwilightButton" destination="dqz-PP-nXA" id="PhD-BZ-EoC"/>
                         <outlet property="puntuacionText" destination="2fA-pS-TIX" id="rXe-Cw-1Ni"/>
                         <outlet property="rainbowButton" destination="NMa-qD-GTt" id="FDr-ty-bYy"/>
+                        <outlet property="ultimoButton" destination="Bqs-C4-FhS" id="Yb4-2k-nSx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vr2-jE-b8j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

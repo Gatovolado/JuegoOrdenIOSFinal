@@ -6,8 +6,11 @@
 //
 
 import Foundation
-
+var player:Usuario? = nil
 class Usuario : Codable {
     var name: String
-    var score: Int
+    var score: Int = 0
+    init(name: String) {
+        self.name = name
+    }
 }

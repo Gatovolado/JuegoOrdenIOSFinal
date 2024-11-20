@@ -18,6 +18,7 @@ class pantallaBotones: UIViewController{
     @IBOutlet weak var PinkieButton: UIButton!
     @IBOutlet weak var RarityButton: UIButton!
     
+    @IBOutlet weak var ultimoButton: UIButton!
     @IBOutlet weak var puntuacionText: UILabel!
     
     @IBAction func Botones(_ sender: UIButton) {
@@ -28,10 +29,20 @@ class pantallaBotones: UIViewController{
         comprobarPunt()
         
     }
+    
+    
     override func viewDidLoad(){
         
     }
     
+    @IBAction func puntuacionesButton(_ sender: Any) {
+        do{
+            postear()
+        }catch let error{
+            print(error.localizedDescription)
+            patch()
+        }
+    }
     func comprobarPunt(){
         
         var puntuacion = 0
@@ -44,6 +55,7 @@ class pantallaBotones: UIViewController{
             }
         }
         puntuacionText.text = "Puntuacion total " + String(puntuacion)
+        player!.score = puntuacion
     }
     
 }
